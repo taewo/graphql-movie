@@ -9,10 +9,19 @@ const Home = () => (
         {({ loading, data, error }) => {
             if (loading) return <span>loading</span>
             if (error) return <span>something happend</span>
-            if (data) {
-                console.log('data..', data)
-                return <span>yay!!</span>
-            }
+            // if (data) {
+            //     console.log('data..', data)
+            //     return <span>yay!!</span>
+            // }
+            return data.movies.map((movie) => {
+                return (
+                    <h2
+                        key={movie.id}
+                    >
+                        {movie.title} / {movie.rating}
+                    </h2>
+                )
+            })
         }}
 
     </Query>
