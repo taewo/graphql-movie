@@ -2,4 +2,4 @@ import React from 'react';
 
 const Detail = () => "Detail"
 
-export defualt Detail;
+export default Detail;
